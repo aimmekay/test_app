@@ -1,0 +1,17 @@
+
+
+  <h1>Listing Assets</h1>
+ 
+<table>
+  <tr>
+    <th>Manufacturer</th>
+    <th>Model</th>
+  </tr>
+ 
+  <% @assets.each do |article| %>
+    <tr>
+      <td><%= article.manufacturer %></td>
+      <td><%= article.model %></td>
+    </tr>
+  <% end %>
+</table>
