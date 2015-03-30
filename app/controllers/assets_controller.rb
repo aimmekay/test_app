@@ -8,6 +8,11 @@ class AssetsController < ApplicationController
 	end
 
 	def new
+		@asset = Asset.new
+	end
+
+	def edit
+		@asset = Asset.find(params[:id])
 	end
 
 	def create
@@ -15,6 +20,16 @@ class AssetsController < ApplicationController
 
 		@asset.save
 		redirect_to @asset
+	end
+
+	def update
+  		@asset = Asset.find(params[:id])
+ 
+  		if @asset.update(asset_params)
+    	  redirect_to @asset
+  		else
+    	  render 'edit'
+  		end
 	end
 
 	private

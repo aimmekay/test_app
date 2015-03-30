@@ -8,10 +8,14 @@
     <th>Model</th>
   </tr>
  
-  <% @assets.each do |article| %>
+  <% @assets.each do |asset| %>
     <tr>
-      <td><%= article.manufacturer %></td>
-      <td><%= article.model %></td>
+      <td><%= asset.manufacturer %></td>
+      <td><%= asset.model %></td>
+      <td><%= link_to 'Show', asset_path(asset) %></td>
+      <td><%= link_to 'Edit', edit_asset_path(asset)%></td>
     </tr>
   <% end %>
 </table>
+
+<%= link_to 'Add', new_asset_path %>
