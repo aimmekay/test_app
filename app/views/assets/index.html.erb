@@ -14,8 +14,11 @@
       <td><%= asset.model %></td>
       <td><%= link_to 'Show', asset_path(asset) %></td>
       <td><%= link_to 'Edit', edit_asset_path(asset)%></td>
+      <td><%= link_to 'Destroy', asset_path(asset),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
 
-<%= link_to 'Add', new_asset_path %>
+<%= link_to 'Add New Desktop', new_asset_path %>

@@ -32,9 +32,16 @@ class AssetsController < ApplicationController
   		end
 	end
 
+	def destroy
+		@asset = Asset.find(params[:id])
+		@asset.destroy
+
+		redirect_to assets_path
+	end
+
 	private
 		def asset_params
-		  params.require(:assets).permit(:manufacturer, :model, :jslgTag, :manufacturerTag, :serialNumber, :osType, :hostName, :ram, :hdd, :department, :location, :firstName, :lastName, :status, :notes)
+		  params.require(:asset).permit(:manufacturer, :model, :jslgTag, :manufacturerTag, :serialNumber, :osType, :hostName, :ram, :hdd, :department, :location, :firstName, :lastName, :status, :notes)
 		end
 
 end
