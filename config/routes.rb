@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get 'laptop/index'
+  get 'laptop/new'
 
   resources :assets
-  resources :laptop
+  resources :laptops
   root 'main#index'
   
 

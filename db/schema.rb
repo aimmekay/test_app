@@ -11,9 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329204457) do
+ActiveRecord::Schema.define(version: 20150402032023) do
 
   create_table "assets", force: :cascade do |t|
+    t.text     "manufacturer"
+    t.text     "model"
+    t.text     "jslgTag"
+    t.text     "manufacturerTag"
+    t.text     "serialNumber"
+    t.text     "osType"
+    t.text     "hostName"
+    t.text     "ram"
+    t.text     "hdd"
+    t.text     "department"
+    t.text     "location"
+    t.text     "firstName"
+    t.text     "lastName"
+    t.text     "status"
+    t.text     "notes"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "laptops", force: :cascade do |t|
     t.text     "manufacturer"
     t.text     "model"
     t.text     "jslgTag"
