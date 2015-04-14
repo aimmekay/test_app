@@ -1,0 +1,22 @@
+<h1>DTUs</h1>
+ 
+<table>
+  <tr>
+    <th>Manufacturer</th>
+    <th>Model</th>
+  </tr>
+ 
+  <% @dtu.each do |dtu| %>
+    <tr>
+      <td><%= dtu.manufacturer %></td>
+      <td><%= dtu.model %></td>
+      <td><%= link_to 'Show', dtu_path(dtu) %></td>
+      <td><%= link_to 'Edit', edit_dtu_path(dtu)%></td>
+      <td><%= link_to 'Destroy', dtu_path(dtu),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Add New DTU', new_dtu_path %>

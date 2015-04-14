@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150402032023) do
+ActiveRecord::Schema.define(version: 20150414022836) do
 
   create_table "assets", force: :cascade do |t|
     t.text     "manufacturer"
@@ -31,6 +31,23 @@ ActiveRecord::Schema.define(version: 20150402032023) do
     t.text     "notes"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "dtus", force: :cascade do |t|
+    t.text     "manufacturer"
+    t.text     "model"
+    t.text     "serialNumber"
+    t.text     "jslgTag"
+    t.text     "macAddress"
+    t.text     "hostName"
+    t.text     "department"
+    t.text     "location"
+    t.text     "firstName"
+    t.text     "lastName"
+    t.text     "status"
+    t.text     "notes"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "laptops", force: :cascade do |t|

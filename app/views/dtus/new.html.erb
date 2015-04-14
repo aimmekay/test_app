@@ -1,0 +1,69 @@
+<h1>ADD DTU</h1>
+
+<%= form_for :dtu, url: dtus_path do |f| %>
+
+<p>
+    <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+  </p>
+ 
+  <p>
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </p>
+
+  <p>
+    <%= f.label :JSLGTag %>
+    <%= f.text_field :jslgTag %>
+  </p>
+
+  <p>
+    <%= f.label :servicetag %>
+    <%= f.text_field :manufacturerTag %>
+  </p>
+
+  <p>
+    <%= f.label :serialnumber %>
+    <%= f.text_field :serialNumber %>
+  </p>
+
+  <p>
+    <%= f.label :hostname %>
+    <%= f.text_field :hostName %>
+  </p>
+
+
+  <p>
+    <%= f.label :department %>
+    <%= f.text_field :department %>
+  </p>
+
+  <p>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <%= f.label :firstname %>
+    <%= f.text_field :firstName %>
+  </p>
+
+  <p>
+    <%= f.label :lastname %>
+    <%= f.text_field :lastName %>
+  </p>
+
+  <p>
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </p>
+
+  <p>
+    <%= f.label :notes %>
+    <%= f.text_field :notes %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
